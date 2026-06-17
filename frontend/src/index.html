@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeutschBuch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>info@deutschbuch.com</span>
+      <div class="topbar-links">
+        <a href="#contact">İletişim</a>
+        <a href="#cartSection">Sepetim</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">DeutschBuch</a>
+
+      <nav class="main-nav">
+        <ul class="menu">
+          <li><a href="#home">Anasayfa</a></li>
+
+          <li class="has-dropdown">
+            <a href="#books">Kategoriler</a>
+            <div class="dropdown mega-menu">
+              <div class="mega-column">
+                <h4>Seviyeler</h4>
+                <a href="#" data-level="A1" class="menu-filter-link">A1 Kitapları</a>
+                <a href="#" data-level="A2" class="menu-filter-link">A2 Kitapları</a>
+                <a href="#" data-level="B1" class="menu-filter-link">B1 Kitapları</a>
+                <a href="#" data-level="B2" class="menu-filter-link">B2 Kitapları</a>
+                <a href="#" data-level="C1" class="menu-filter-link">C1 Kitapları</a>
+                <a href="#" data-level="C2" class="menu-filter-link">C2 Kitapları</a>
+              </div>
+              <div class="mega-column">
+                <h4>Kategoriler</h4>
+                <a href="#" data-category="Ders Kitabı" class="menu-category-link">Ders Kitabı</a>
+                <a href="#" data-category="Çalışma Kitabı" class="menu-category-link">Çalışma Kitabı</a>
+                <a href="#" data-category="Grammatik" class="menu-category-link">Grammatik</a>
+                <a href="#" data-category="Sınav Hazırlık" class="menu-category-link">Sınav Hazırlık</a>
+                <a href="#" data-category="Lektüre" class="menu-category-link">Lektüre</a>
+                <a href="#" data-category="Wortschatz" class="menu-category-link">Wortschatz</a>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="#featured">Öne Çıkanlar</a></li>
+          <li><a href="#levels">Seviyeler</a></li>
+          <li><a href="#contact">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <button class="cart-button" id="cartToggle">
+        🛒 <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="slider-section">
+      <div class="slide active">
+        <div class="container slide-inner">
+          <div class="slide-text">
+            <span class="eyebrow">DeutschBuch</span>
+            <h1>Almanca öğrenmeye doğru seviyeden başla</h1>
+            <p>A1’den C2’ye kadar seviyene uygun Almanca kitaplarını keşfet. Ders kitabı, gramer, kelime ve sınav hazırlık kaynakları tek yerde.</p>
+            <div class="hero-actions">
+              <a href="#books" class="btn primary">Kitapları İncele</a>
+              <a href="#levels" class="btn secondary">Seviye Seç</a>
+            </div>
+          </div>
+          <div class="slide-image">
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop" alt="Kitaplar" />
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="container slide-inner">
+          <div class="slide-text">
+            <span class="eyebrow">Sınav Hazırlık</span>
+            <h1>TestDaF ve Telc için doğru kaynaklar</h1>
+            <p>Orta ve ileri seviyedeki öğrenciler için sınav odaklı kitaplar, deneme içerikleri ve strateji kaynakları.</p>
+            <div class="hero-actions">
+              <a href="#books" class="btn primary">Sınav Kitapları</a>
+              <a href="#featured" class="btn secondary">Öne Çıkanlar</a>
+            </div>
+          </div>
+          <div class="slide-image">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop" alt="Sınav kitapları" />
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button id="prevSlide">‹</button>
+        <button id="nextSlide">›</button>
+      </div>
+    </section>
+
+    <section class="service-strip">
+      <div class="container service-grid">
+        <div class="service-card">
+          <h3>Ücretsiz Kargo</h3>
+          <p>750 TL üzeri siparişlerde</p>
+        </div>
+        <div class="service-card">
+          <h3>Online Destek</h3>
+          <p>09:00 - 18:30 arası</p>
+        </div>
+        <div class="service-card">
+          <h3>Kolay Seviye Filtreleme</h3>
+          <p>A1’den C2’ye hızlı erişim</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">ÖNE ÇIKANLAR</span>
+            <h2>Popüler Kitaplar</h2>
+          </div>
+          <a href="#books" class="text-link">Tümünü Gör</a>
+        </div>
+        <div id="featuredBooks" class="book-grid"></div>
+      </div>
+    </section>
+
+    <section class="section light" id="levels">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">SEVİYELER</span>
+            <h2>Seviyene göre kitap seç</h2>
+          </div>
+        </div>
+
+        <div class="levels-grid">
+          <button class="level-box" data-level-jump="A1">A1</button>
+          <button class="level-box" data-level-jump="A2">A2</button>
+          <button class="level-box" data-level-jump="B1">B1</button>
+          <button class="level-box" data-level-jump="B2">B2</button>
+          <button class="level-box" data-level-jump="C1">C1</button>
+          <button class="level-box" data-level-jump="C2">C2</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="books">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">KİTAPLAR</span>
+            <h2>Tüm Kitaplar</h2>
+          </div>
+        </div>
+
+        <div class="filters">
+          <input type="text" id="searchInput" placeholder="Kitap ara..." />
+          <select id="levelFilter">
+            <option value="">Tüm Seviyeler</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="B1">B1</option>
+            <option value="B2">B2</option>
+            <option value="C1">C1</option>
+            <option value="C2">C2</option>
+            <option value="B2-C1">B2-C1</option>
+          </select>
+          <select id="categoryFilter">
+            <option value="">Tüm Kategoriler</option>
+            <option value="Ders Kitabı">Ders Kitabı</option>
+            <option value="Çalışma Kitabı">Çalışma Kitabı</option>
+            <option value="Grammatik">Grammatik</option>
+            <option value="Sınav Hazırlık">Sınav Hazırlık</option>
+            <option value="Lektüre">Lektüre</option>
+            <option value="Wortschatz">Wortschatz</option>
+          </select>
+          <button id="resetFilters" class="btn ghost">Filtreyi Temizle</button>
+        </div>
+
+        <div id="booksContainer" class="book-grid"></div>
+      </div>
+    </section>
+
+    <section class="section light" id="contact">
+      <div class="container contact-box">
+        <span class="section-tag">İLETİŞİM</span>
+        <h2>Bizimle İletişime Geçin</h2>
+        <p>DeutschBuch, Almanca öğrenen kullanıcıların seviyelerine göre doğru kitapları bulmasını kolaylaştıran Websitesidir.</p>
+        <p><strong>E-posta:</strong> lehrerdemir@gmail.com</p>
+        <p><strong>Telefon:</strong> +90 530 520 87 28</p>
+        <p><strong>Adres:</strong> İstanbul / Türkiye</p>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Sepetim</h3>
+      <button id="closeCart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer" id="cartSection">
+      <div class="summary-row">
+        <span>Toplam Ürün</span>
+        <strong id="totalItems">0</strong>
+      </div>
+      <div class="summary-row">
+        <span>Toplam Tutar</span>
+        <strong id="totalPrice">₺0</strong>
+      </div>
+      <button class="btn primary full">Siparişi Tamamla</button>
+    </div>
+  </aside>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <div class="modal" id="detailModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeModal">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
